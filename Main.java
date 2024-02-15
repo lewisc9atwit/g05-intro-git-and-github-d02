@@ -2,8 +2,6 @@ import java.util.Scanner;/**
  * TextAdventrue
  */
 
- 
-
 public class Main {
 
 public static void start() throws InterruptedException{
@@ -17,7 +15,7 @@ public static void main(String[] args) throws InterruptedException {
     Scanner userInput = new Scanner(System.in);
 
 
-    System.out.println( " \n Welcome to Space Donut! \n All choices will be in lowercase");
+    System.out.println( " \n Welcome to " + ConsoleColors.WHITE_BOLD_BRIGHT + "Space Donut! " + ConsoleColors.RESET+ "\n All choices will be in lowercase");
     System.out.println( "Type Start to begin or Exit to exit");
 
     
@@ -31,13 +29,13 @@ public static void main(String[] args) throws InterruptedException {
         Thread.sleep(2000);
         System.out.println("> 'What happened last night' You say to yourself as you try to grasp your surroundings.");
         Thread.sleep(2000);
-        System.out.println("> Looking around, you notice that your last donut is missing from your bed stand.");
+        System.out.println("> Looking around, you notice that your last "+ ConsoleColors.WHITE_BOLD_BRIGHT + "Donut" + ConsoleColors.RESET +" is missing from your bed stand.");
         Thread.sleep(2000);
-        System.out.println("> Out of the corner of your eye you see the donut floating outside your window.");
+        System.out.println("> Out of the corner of your eye you see the "+ ConsoleColors.WHITE_BOLD_BRIGHT + "Donut" + ConsoleColors.RESET +" floating outside your window.");
         Thread.sleep(2000);
         System.out.println("> 'WHAT!' You yell out loud.");
         Thread.sleep(2000);
-        System.out.println("> 'I need to get that donut, but first I need my spacesuit' \n");
+        System.out.println("> 'I need to get that "+ ConsoleColors.WHITE_BOLD_BRIGHT + "Donut" + ConsoleColors.RESET +", but first I need my spacesuit' \n");
         Thread.sleep(2000);
         Rooms.Bedroom1();
     }else if(choice.contains("xit")){//user can enter Exit or exit

@@ -267,14 +267,14 @@ public class Rooms {
                 break;
             case "dresser": //Player looks in dresser
                 if (!Inventory.hasBoots()){
-                 System.out.println("\n > Inside the dresser contains a pair of space boots");
+                 System.out.println("\n > Inside the dresser contains a pair of space" +ConsoleColors.PURPLE+"boots"+ConsoleColors.RESET);
                  Thread.sleep(1500);
                  System.out.println("> You put them on, they feel heavier than anticipated");
                  Thread.sleep(1500);
                  Inventory.collectBoots();
                 }
                 else {
-                    System.out.println("\n > You've already found your boots in this dresser");
+                    System.out.println("\n > You've already found your " +ConsoleColors.PURPLE+"boots"+ConsoleColors.RESET +" in this dresser");
                 }
                 
                 Thread.sleep(1500);
@@ -460,13 +460,13 @@ public static void armory()throws InterruptedException{
             }
             // if player has correct key
             else if(Inventory.hasPants() == false) {
-                System.out.println("> You open the chest to find your pants somehow ended up inside");
+                System.out.println("> You open the chest to find your "+ConsoleColors.BLUE +"pants"+ConsoleColors.RESET +" somehow ended up inside");
                 Thread.sleep(1500);
-                System.out.println("> You put on the pants as you wonder how that happened");
+                System.out.println("> You put on the "+ConsoleColors.BLUE +"pants"+ConsoleColors.RESET +" as you wonder how that happened");
                 Inventory.collectPants();
             }
             else{
-                System.out.println("> You have already opened this chest. It had your pants in it");
+                System.out.println("> You have already opened this chest. It had your "+ConsoleColors.BLUE +"pants"+ConsoleColors.RESET +" in it");
             }
             Thread.sleep(2000);
             armory(); //Loop back
@@ -569,7 +569,7 @@ public static void comms()throws InterruptedException{
                 break;
             }
             else{
-                System.out.println("> You turn the chair around to find you helmet resting in the seat");
+                System.out.println("> You turn the chair around to find you "+ConsoleColors.GREEN + "helmet"+ ConsoleColors.RESET +" resting in the seat");
                 Thread.sleep(1500);
                 System.out.println("> You rejoice in finding a piece of your suit and put the helment on");
                 Thread.sleep(1500);
@@ -697,8 +697,8 @@ public static void boiler() throws InterruptedException{
     Thread.sleep(1500);
     System.out.println("> This place is full of pipes, pumps, water tanks, and an interesting looking bucket in one corner");
     Thread.sleep(1500);
-    System.out.println("> You notice a jacket hanging on one of the walls");
-    System.out.println("SELECT: hall,  jacket");
+    System.out.println("> You notice a " + ConsoleColors.YELLOW + "jacket"+ ConsoleColors.RESET + " hanging on one of the walls");
+    System.out.println("SELECT: hall,  " + ConsoleColors.YELLOW + "jacket"+ ConsoleColors.RESET);
 
     String choice = userInput.nextLine();
 
@@ -710,15 +710,15 @@ public static void boiler() throws InterruptedException{
             break;       
         case "jacket" : //Player chooses the jacket
             if (Inventory.hasJacket() == true){
-                System.out.println("> You admire your jacket once more, 'I look incredible in this!'");
+                System.out.println("> You admire your " + ConsoleColors.YELLOW + "jacket"+ ConsoleColors.RESET + " once more, 'I look incredible in this!'");
                 Thread.sleep(1500);
                 boiler(); //Loop back
                 break;
             }
             else{
-                System.out.println("> You take the jacket off the wall and realize it's built for space travel!");
+                System.out.println("> You take the " + ConsoleColors.YELLOW + "jacket"+ ConsoleColors.RESET + " off the wall and realize it's built for space travel!");
                 Thread.sleep(1500);
-                System.out.println("> You put the jacket on and think to yourself, 'Oh yeah, I look cool'");
+                System.out.println("> You put the " + ConsoleColors.YELLOW + "jacket"+ ConsoleColors.RESET + " on and think to yourself, 'Oh yeah, I look cool'");
                 Thread.sleep(1500);
                 Inventory.collectJacket();
                 boiler(); //Loop back
